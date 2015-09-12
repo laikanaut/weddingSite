@@ -15,8 +15,9 @@
     <body ng-controller="weddingController as weddingCtrl">
         
     
-        
-        <wedding-party></wedding-party>
+        <div ng-repeat="person in weddingCtrl.people">
+            <wedding-party person="person"></wedding-party>
+        </div>
         
         
     

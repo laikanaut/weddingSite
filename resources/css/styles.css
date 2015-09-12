@@ -1,12 +1,113 @@
 body{
-        
+    color:#414141;
+    
+    background-color:#ecefda;
 }
 
 
-.male-colors{
-    background-color:blue;
+
+/*Lovebird Object*/
+
+
+
+
+/*Person Object*/
+
+.personContainer
+{
+    width:10%;
+    min-width:100px;
+    position:relative;
+    
+    text-align:center;
+    
+    margin-left:10px;
+    margin-right:10px;
+    
+    cursor:pointer;
 }
 
-.female-colors{
-    background-color:pink;   
+.personAffiliation
+{
+
+    display:inline; 
+    
+    transition: text-shadow 0.25s ease-out 0s;
+    
+    
 }
+
+.personName
+{
+    position:absolute;
+    top:75%;
+    
+    display:block;
+    
+    width:100%;
+    
+    border:2px solid #ffffff;
+    border-radius:4px;
+    
+    padding:2px;
+    
+    background-color:#f06faa; 
+    color:#ffffff;
+    
+    
+     transition: box-shadow 0.25s ease-out 0s;
+}
+
+.personImg
+{
+    /*background-image: url(...);
+    background-size: contain;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;*/ 
+    
+    width:100%;
+
+    border-radius:500px;
+    
+    transition: box-shadow 0.25s ease-out 0s;
+    
+    
+}
+
+
+.bride-affiliation {
+    color:#f06faa;
+}
+
+.groom-affiliation {
+    color:#164f82;
+}
+
+.male-background {
+    background-color:#164f82;
+}
+
+.female-background {
+    background-color:#f06faa;   
+}
+
+
+/*Shodowing*/
+.personContainer:hover > .personAffiliation
+{
+       text-shadow: 2px 2px #c5c5c5;
+}
+
+.personContainer:hover > .personName
+{
+    box-shadow: 2px 2px #c5c5c5;
+}
+
+.personContainer:hover > .personImg
+{
+    box-shadow: 2px 2px #c5c5c5;
+}
+    

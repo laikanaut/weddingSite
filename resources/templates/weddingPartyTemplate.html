@@ -1,10 +1,14 @@
 <div class="personContainer" ng-class=""><!--Base it on gender for color of border-->
-    <h4 class="personRole">Maid of Honor</h4>
-    <img class="personImg" src="resources/img/people/amy_brown.png">
-    <h3 class="personName">Amy Brown</h3>
+    <p class="personAffiliation" ng-class="genderLogic({{person.userAffil}}) ? 'groom-affiliation' : 'bride-affiliation'">{{person.whoToCouple}}</p>
+    <img class="personImg" ng-src="{{person.userImg}}">
+    <h4 class="personName" ng-class="genderLogic({{person.userGender}}) ? 'male-background' : 'female-background'">{{person.userName}}</h4>
     
-    <div class="personExpandDiv">
-        Lorem Ipsum
+    <div class="personExpandDiv" ng-class="genderLogic({{person.userGender}}) ? 'male-background' : 'female-background'">
+        <h3 class="expandableName"></h3>
+        
+        <p class="personDescription">
+            
+        </p>
         
     </div>
     
