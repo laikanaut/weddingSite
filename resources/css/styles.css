@@ -49,6 +49,11 @@ body{
         margin-left:auto;
         margin-right:auto;
     }
+    
+    .page-subtitle
+    {
+        text-align:center;
+    }
 }
 
 /*Medium*/
@@ -63,7 +68,7 @@ body{
 @media all and (min-width: 992px) {
     #mainContent
     {
-        width:50%;
+        width:54%;
         margin-left:35px;
     }
 }
@@ -71,7 +76,9 @@ body{
 
 #content-window
 {
-   position:absolute; 
+    position:absolute; 
+    
+    width:100%;
 }
 
 
@@ -158,6 +165,19 @@ body{
 
 
 
+/*Bridal Party Styles*/
+.party-side
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+
+
 
 
 
@@ -230,6 +250,11 @@ body{
 
 
 /*Person Object*/
+wedding-party{
+
+    max-width:125px;
+}
+
 
 .personContainer
 {
@@ -250,6 +275,8 @@ body{
 
     display:inline; 
     
+    font-size:0.75em;
+    
     transition: text-shadow 0.25s ease-out 0s;
     
     
@@ -258,7 +285,7 @@ body{
 .personName
 {
     position:absolute;
-    top:75%;
+    top:88%;
     
     display:block;
     
@@ -271,9 +298,9 @@ body{
     
     background-color:#f06faa; 
     color:#ffffff;
+    font-size:0.80em;
     
-    
-     transition: box-shadow 0.25s ease-out 0s;
+    transition: box-shadow 0.25s ease-out 0s;
 }
 
 .personImg
@@ -316,7 +343,7 @@ body{
 /*Shodowing*/
 .personContainer:hover > .personAffiliation
 {
-       text-shadow: 3px 3px 5px #c5c5c5;
+       text-shadow: 3px 3px 3px #b5b5b5;
 }
 
 .personContainer:hover > .personName

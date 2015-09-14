@@ -23,6 +23,60 @@
         
         };
         
+        var tomp = {
+            userImg:"resources/img/people/tom_potter.png",
+            userGender:0,  //0F - 1M
+            userName:"Tom Potter",
+            userAffil:0, //0K - 1J
+            whoToCouple:"Katie's Brother",
+            school:"ud",
+            title:"",
+            role:"",
+            desc:""
+        
+        };
+        
+        var casey = {
+            userImg:"resources/img/people/casey_keller.png",
+            userGender:0,  //0F - 1M
+            userName:"Casey Keller",
+            userAffil:0, //0K - 1J
+            whoToCouple:"Katie's High School Friend",
+            school:"ud",
+            title:"",
+            role:"",
+            desc:""
+        
+        };
+        
+        var lauren = {
+            userImg:"resources/img/people/lauren_peach.png",
+            userGender:0,  //0F - 1M
+            userName:"Amy Brown",
+            userAffil:0, //0K - 1J
+            whoToCouple:"Katie's High School Friend",
+            school:"ud",
+            title:"",
+            role:"",
+            desc:""
+        
+        };
+        
+        var john = {
+            userImg:"resources/img/people/john_dicairano.png",
+            userGender:0,  //0F - 1M
+            userName:"Amy Brown",
+            userAffil:0, //0K - 1J
+            whoToCouple:"Jimmy's Cousin",
+            school:"ud",
+            title:"",
+            role:"Best Man",
+            desc:""
+        
+        };
+        
+        
+        
         var tom = {
             userImg:"resources/img/people/tom_kerrigan.png",
             userGender:1,  //0F - 1M
@@ -36,7 +90,9 @@
         
         };
         
-        vm.people = [amy, tom];
+        vm.brideSide = [amy, tomp, casey, lauren];
+        vm.groomSide = [john, tom];
+        
         
         vm.homepage = "resources/pages/ourwedding.html";
         vm.currentPage = "ourwedding";

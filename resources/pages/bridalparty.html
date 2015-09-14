@@ -1,3 +1,23 @@
 <div>
-    Bridal Party
+    <h3 class="page-subtitle">The Bridal Party</h3>
+
+    <div id="chart-container">
+        <div id="lovebirds"></div>
+        <div id="bridalPartyFlowchart">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="party-side">
+                        <wedding-party ng-repeat="person in weddingCtrl.brideSide" person="person"></wedding-party>
+                    </div>    
+                </div>
+                <div class="col-xs-6">
+                    <div class="party-side">
+                        <wedding-party ng-repeat="person in weddingCtrl.groomSide" person="person"></wedding-party>
+                    </div> 
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
 </div>

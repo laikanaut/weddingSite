@@ -1,7 +1,7 @@
 <div class="personContainer" ng-class=""><!--Base it on gender for color of border-->
     <p class="personAffiliation" ng-class="genderLogic({{person.userAffil}}) ? 'groom-affiliation' : 'bride-affiliation'">{{person.whoToCouple}}</p>
     <img class="personImg" ng-src="{{person.userImg}}">
-    <h4 class="personName" ng-class="genderLogic({{person.userGender}}) ? 'male-background' : 'female-background'">{{person.userName}}</h4>
+    <p class="personName" ng-class="genderLogic({{person.userGender}}) ? 'male-background' : 'female-background'">{{person.userName}}</p>
     
     <div class="personExpandDiv" ng-class="genderLogic({{person.userGender}}) ? 'male-background' : 'female-background'">
         <h3 class="expandableName"></h3>
