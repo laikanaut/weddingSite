@@ -1,23 +1,101 @@
 <!DOCTYPE html>
 <html ng-app="nausicaa">
     <head>
+        <meta charset="UTF-8">
+        
         <title>Katie & Jimmy's Wedding</title>
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <script src="https:////code.angularjs.org/1.4.2/angular-animate.js"></script>   
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="resources/js/app.js"></script>
+        <script src="resources/js/weddingPartyCtrl.js"></script>
+        <script src="resources/js/loveBirdsCtrl.js"></script>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/animations.css">
         <link rel="stylesheet" href="resources/css/styles.css">
+        
+        <!--Fonts-->
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
         
     </head>
     <body ng-controller="weddingController as weddingCtrl">
         
-    
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    
+                    
+                    <button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#navContainer" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
+                    </button>
+          
+                </div>
+            </div>
+        
+        </nav>
+        <div class="container-fluid">
+            <h1 class="main-title">Katie & Jimmy</h1>
+            
+        </div>
+        
+        <div class="container-fluid">
+        
+            <div id="imgContainer" class="pull-left hidden-sm hidden-xs">
+                <img src="resources/img/couple/katieandjimmy.jpg">
+                
+            </div>
+            
+            <div id="mainContent" class="pull-left " >
+                <div id="content-window" class="slide-animate" ng-include="weddingCtrl.homepage"></div>
+            </div>
+                
+                
+                
+            
+            
+            
+            <div id="navContainer" class="pull-right collapse navbar-collapse">
+            
+                <ul>
+                    <li>
+                        <a href="#" ng-class="{'current': weddingCtrl.currentPage == 'ourwedding'}" ng-click="weddingCtrl.loadPage('ourwedding')">Our Wedding</a>
+                    </li>
+                    <li>
+                        <a href="#" ng-class="{'current': weddingCtrl.currentPage == 'bridalparty'}" ng-click="weddingCtrl.loadPage('bridalparty')">Bridal Party</a>
+                    </li>
+                    <li>
+                        <a href="#" ng-class="{'current': weddingCtrl.currentPage == 'accomodations'}" ng-click="weddingCtrl.loadPage('accomodations')">Accomodations</a>
+                    </li>
+                    <li>
+                        <a href="#" ng-class="{'current': weddingCtrl.currentPage == 'registry'}" ng-click="weddingCtrl.loadPage('registry')">Registry</a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        <!--<love-birds></love-birds>
+        
         <div ng-repeat="person in weddingCtrl.people">
             <wedding-party person="person"></wedding-party>
-        </div>
+        </div>-->
         
         
     

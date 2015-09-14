@@ -1,10 +1,13 @@
 (function()
  {
-    var app = angular.module('nausicaa',[]);
+    var app = angular.module('nausicaa',['ngAnimate']);
     
     function weddingController()
     {
         vm=this;
+        
+        
+        
         
         
         var amy = {
@@ -35,6 +38,23 @@
         
         vm.people = [amy, tom];
         
+        vm.homepage = "resources/pages/ourwedding.html";
+        vm.currentPage = "ourwedding";
+        vm.loadPage = loadPage;
+        
+        
+        function init(){
+            
+        }
+        
+        function loadPage(page)
+        {
+            vm.homepage = "resources/pages/"+page+".html";
+            vm.currentPage = page;
+            
+        }
+        
+        init();
         
         
         
@@ -44,30 +64,6 @@
     
     app.controller('weddingController', weddingController);
     
-    app.directive('weddingParty', function(){
-        
-        return{
-        
-            restrict:'E',
-            scope: { person: '=' },
-            templateUrl:'resources/templates/weddingPartyTemplate.html',
-            link: function link(scope, element, attrs) {
-                
-                
-                
-                scope.genderLogic = genderLogic;
-                
-                function genderLogic(gender){
-            
-                    gender = !!gender;
-                    
-                    return gender;
-                }
-                
-                
-            }
-            
-        }        
-    });
+    
     
 })();

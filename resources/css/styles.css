@@ -1,12 +1,230 @@
 body{
     color:#414141;
-    
+    font-size:16px;
     background-color:#ecefda;
+    
+    font-family: 'Lato', sans-serif;
+}
+
+.main-title
+{
+    color:#352035;
+    text-align:center;
+}
+
+
+#imgContainer
+{
+    padding-top:25px;
+    padding-left:20px;
+    
+    
+    width:22%;
+}
+
+#imgContainer img
+{
+    width:100%;
+    
+    border-radius:4px;
+    
+    opacity:0.75;
+    
+    filter: grayscale(00%);
+    
+    /*border:4px solid #b7b8c4;*/
+}
+
+
+#mainContent
+{
+    position:relative;
+}
+
+/*Small*/
+@media all and (max-width: 767px) {
+    #mainContent
+    {
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+/*Medium*/
+@media all and (min-width:768px) and (max-width: 991px) {
+    #mainContent
+    {
+        width:65%;
+    }
+}
+
+/*Large*/
+@media all and (min-width: 992px) {
+    #mainContent
+    {
+        width:50%;
+        margin-left:35px;
+    }
+}
+
+
+#content-window
+{
+   position:absolute; 
 }
 
 
 
+#navContainer
+{
+    position:fixed;
+    right:0;
+    
+    min-width:240px;
+}
+
+#navContainer ul
+{
+    list-style: none;
+    margin-right:20px;
+    text-align:left;
+    
+    min-width:240px;
+    
+}
+
+#navContainer ul li
+{
+    display:block;
+    padding-top:8px;
+    padding-bottom:8px;
+    
+    position:relative;
+    
+    overflow:hidden;
+    
+}
+
+#navContainer ul li a
+{
+    display:inline-block;
+    padding:8px;
+    color:#414141;
+    outline:none;
+    text-decoration:none;
+    transition:font-size 0.15s ease-out 0s;  
+    
+}
+
+#navContainer ul li a:hover
+{
+    text-decoration: none;
+    outline:none;
+    font-size:1.25em;
+}
+
+#navContainer ul li a:active
+{
+    outline:none;
+    text-decoration:none;
+}
+
+#navContainer ul li a:visited
+{
+    outline:none;
+}
+
+
+#navContainer ul li a::after {
+    display:block;
+    content:attr(title);
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+    margin-bottom:-1px;
+}
+
+.current
+{
+    font-size:1.25em;
+    color:#b7b8c4 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*Lovebird Object*/
+.loveBirdContainer
+{
+    margin-top:50px;   
+}
+
+.heartText
+{
+    color:#ffffff;
+    
+    z-index: 1000;
+    
+    position:absolute;
+    
+    text-align:center;
+    
+    top:5px;
+}
+
+
+/*Heart*/
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #352035;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
 
 
 
@@ -98,16 +316,56 @@ body{
 /*Shodowing*/
 .personContainer:hover > .personAffiliation
 {
-       text-shadow: 2px 2px #c5c5c5;
+       text-shadow: 3px 3px 5px #c5c5c5;
 }
 
 .personContainer:hover > .personName
 {
-    box-shadow: 2px 2px #c5c5c5;
+    box-shadow: 5px 5px 3px #c5c5c5;
 }
 
 .personContainer:hover > .personImg
 {
-    box-shadow: 2px 2px #c5c5c5;
+    box-shadow: 5px 5px 3px #c5c5c5;
 }
     
+
+/*Bootstrap Overrides*/
+.navbar{
+ 
+    margin-bottom:0;
+    min-height:0;
+    
+    
+}
+
+.navbar-default{
+ 
+    background-color:transparent;
+    border:none;
+}
+
+
+
+
+/*Print View*/
+@media print{
+ 
+    *{
+        display:none;
+    }
+    
+    #mainContent{
+        display:block;
+        width:95%;
+        text-align:center;
+    }
+    
+    
+}
+
+
+
+
+
+
