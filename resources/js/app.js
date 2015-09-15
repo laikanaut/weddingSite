@@ -97,7 +97,8 @@
         vm.homepage = "resources/pages/ourwedding.html";
         vm.currentPage = "ourwedding";
         vm.loadPage = loadPage;
-        
+        vm.menuExpanded = false;
+        vm.toggleMenu = toggleMenu;
         
         function init(){
             
@@ -107,7 +108,13 @@
         {
             vm.homepage = "resources/pages/"+page+".html";
             vm.currentPage = page;
+            vm.menuExpanded = false;
             
+        }
+
+        function toggleMenu()
+        {
+            vm.menuExpanded = !vm.menuExpanded;
         }
         
         init();

@@ -41,8 +41,67 @@ body{
     position:relative;
 }
 
-/*Small*/
-@media all and (max-width: 767px) {
+/*Small and XS*/
+@media all and (max-width: 991px) {  /*767px*/
+    
+    
+    #navContainer
+    {
+        position:absolute;
+        top:0;
+        
+        
+        
+        z-index:500;
+        
+        background-color:#352035;  
+        
+        height:100%;
+        
+        color:#ffffff;
+        
+        transition: left 0.25s ease-out 0s;
+        
+    }
+    
+    #navContainer ul li a
+    {
+        color:#ffffff !important;
+    }
+    
+    
+    .side-nav-toggle
+    {
+        
+        position:absolute;
+        right:100%;
+        top:0;
+        
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left:15px;
+        
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        
+        border:none;
+        
+        background-color:#352035;
+        
+        outline:none;
+        
+        
+        
+    }
+    
+    
+    
+    .nav-hidden
+    {
+       left:95%; 
+    }
+    
+    
     #mainContent
     {
         width:95%;
@@ -52,15 +111,81 @@ body{
     
     .page-subtitle
     {
-        text-align:center;
+        text-align:left;
+    }
+    
+    .main-title
+    {
+        text-align:left;
     }
 }
 
+
+/*Xsish Only*/
+@media all and (min-width:375px )
+{
+   .nav-expanded
+    {
+        left:30%;   
+    } 
+}
+
+
+@media all and (min-width:375px ) and (max-width: 767px) {
+    
+    .nav-expanded
+    {
+        left:50%;   
+    }
+}
+
+
+/*VERY IMPORTANT --- Need to work out menu shift on menu expanded*/
+/*@media all and (min-width:767px ) {
+    
+    #navContainer
+    {
+        
+        right:0 !important;
+    
+        min-width:240px !important;
+        
+    }
+    
+}*/
+    
+    
+
+
+
+
+
+
+
+
+
 /*Medium*/
 @media all and (min-width:768px) and (max-width: 991px) {
-    #mainContent
+    /*#mainContent
     {
         width:65%;
+    }
+    
+    .side-nav-toggle
+    {
+        display:none;
+    }*/
+    
+    #mainContent
+    {
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .nav-expanded
+    {
+        left:70%;   
     }
 }
 
@@ -70,6 +195,11 @@ body{
     {
         width:54%;
         margin-left:35px;
+    }
+    
+    .side-nav-toggle
+    {
+        display:none;
     }
 }
 
@@ -372,13 +502,89 @@ wedding-party{
     border:none;
 }
 
+.nav-collapse
+{
 
+    transition:height 0.01s;
+}
+
+
+/*Toggle Button*/
+#toggle-icon-btn {
+  /*width: 20px;
+  height: 20px;
+  position: relative;
+  margin: 50px auto;*/
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+
+#toggle-icon-btn span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #ecefda;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+#toggle-icon-btn span:nth-child(1) {
+  top: 0px;
+}
+
+#toggle-icon-btn span:nth-child(2) {
+  top: 18px;
+}
+
+#toggle-icon-btn span:nth-child(3) {
+  top: 36px;
+}
+
+#toggle-icon-btn.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#toggle-icon-btn.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#toggle-icon-btn.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
 
 
 /*Print View*/
 @media print{
  
-    *{
+    #imgContainer, #navContainer {
         display:none;
     }
     

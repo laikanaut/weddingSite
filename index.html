@@ -23,23 +23,6 @@
     </head>
     <body ng-controller="weddingController as weddingCtrl">
         
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    
-                    
-                    <button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#navContainer" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        
-                    </button>
-          
-                </div>
-            </div>
-        
-        </nav>
         <div class="container-fluid">
             <h1 class="main-title">Katie & Jimmy</h1>
             
@@ -61,7 +44,18 @@
             
             
             
-            <div id="navContainer" class="pull-right collapse navbar-collapse">
+            <div id="navContainer" class="pull-right" ng-class="weddingCtrl.menuExpanded ? 'nav-expanded' : 'nav-hidden'">
+                
+                <button type="button" class="side-nav-toggle navbar-right"  data-target="#navContainer" aria-expanded="false" ng-click="weddingCtrl.toggleMenu()" >
+                        <span class="sr-only">Toggle navigation</span>
+                        <div id="toggle-icon-btn" ng-class="{ 'open': weddingCtrl.menuExpanded}">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                    </button>
+                
             
                 <ul>
                     <li>
@@ -79,26 +73,9 @@
                     
                 </ul>
                 
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            </div>    
         </div>
-        <!--<love-birds></love-birds>
-        
-        <div ng-repeat="person in weddingCtrl.people">
-            <wedding-party person="person"></wedding-party>
-        </div>-->
-        
-        
-    
+
     </body>
 </html>
     
