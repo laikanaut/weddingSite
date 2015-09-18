@@ -10,6 +10,13 @@ body{
 {
     color:#352035;
     text-align:center;
+    
+    font-family: 'PT Serif', serif;
+}
+
+.main-title span
+{
+    font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -41,169 +48,6 @@ body{
     position:relative;
 }
 
-/*Small and XS*/
-@media all and (max-width: 991px) {  /*767px*/
-    
-    
-    #navContainer
-    {
-        position:absolute;
-        top:0;
-        
-        
-        
-        z-index:500;
-        
-        background-color:#352035;  
-        
-        height:100%;
-        
-        color:#ffffff;
-        
-        transition: left 0.25s ease-out 0s;
-        
-    }
-    
-    #navContainer ul li a
-    {
-        color:#ffffff !important;
-    }
-    
-    
-    .side-nav-toggle
-    {
-        
-        position:absolute;
-        right:100%;
-        top:0;
-        
-        padding-top:15px;
-        padding-bottom:15px;
-        padding-left:15px;
-        
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-        
-        border:none;
-        
-        background-color:#352035;
-        
-        outline:none;
-        
-        
-        
-    }
-    
-    
-    
-    .nav-hidden
-    {
-       left:95%; 
-    }
-    
-    
-    #mainContent
-    {
-        width:95%;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    
-    .page-subtitle
-    {
-        text-align:left;
-    }
-    
-    .main-title
-    {
-        text-align:left;
-    }
-}
-
-
-/*Xsish Only*/
-@media all and (min-width:375px )
-{
-   .nav-expanded
-    {
-        left:30%;   
-    } 
-}
-
-
-@media all and (min-width:375px ) and (max-width: 767px) {
-    
-    .nav-expanded
-    {
-        left:50%;   
-    }
-}
-
-
-/*VERY IMPORTANT --- Need to work out menu shift on menu expanded*/
-/*@media all and (min-width:767px ) {
-    
-    #navContainer
-    {
-        
-        right:0 !important;
-    
-        min-width:240px !important;
-        
-    }
-    
-}*/
-    
-    
-
-
-
-
-
-
-
-
-
-/*Medium*/
-@media all and (min-width:768px) and (max-width: 991px) {
-    /*#mainContent
-    {
-        width:65%;
-    }
-    
-    .side-nav-toggle
-    {
-        display:none;
-    }*/
-    
-    #mainContent
-    {
-        width:95%;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    
-    .nav-expanded
-    {
-        left:70%;   
-    }
-}
-
-/*Large*/
-@media all and (min-width: 992px) {
-    #mainContent
-    {
-        width:54%;
-        margin-left:35px;
-    }
-    
-    .side-nav-toggle
-    {
-        display:none;
-    }
-}
-
-
 #content-window
 {
     position:absolute; 
@@ -215,10 +59,13 @@ body{
 
 #navContainer
 {
+   /*right:0;*/
     position:fixed;
     right:0;
     
     min-width:240px;
+    
+    transition: left 0.25s ease-out 0s;
 }
 
 #navContainer ul
@@ -227,7 +74,7 @@ body{
     margin-right:20px;
     text-align:left;
     
-    min-width:240px;
+    
     
 }
 
@@ -250,6 +97,10 @@ body{
     color:#414141;
     outline:none;
     text-decoration:none;
+    
+    font-family: 'PT Serif', serif;
+    
+    
     transition:font-size 0.15s ease-out 0s;  
     
 }
@@ -258,7 +109,7 @@ body{
 {
     text-decoration: none;
     outline:none;
-    font-size:1.25em;
+    
 }
 
 #navContainer ul li a:active
@@ -273,26 +124,198 @@ body{
 }
 
 
-#navContainer ul li a::after {
-    display:block;
-    content:attr(title);
-    font-weight:bold;
-    height:1px;
-    color:transparent;
-    overflow:hidden;
-    visibility:hidden;
-    margin-bottom:-1px;
+
+
+
+
+
+
+/************************************Size Specific Media *************************************/
+
+
+/*Small and XS*/
+@media all and (max-width: 991px) {  /*767px*/
+    
+    
+    #navContainer
+    {
+        position:absolute;
+        top:0;
+        z-index:500;
+        background-color:#352035;  
+        height:100%;
+        color:#ffffff;
+    }
+    
+    #navContainer ul
+    {
+        margin-right:0 !important;   
+    }
+    
+    #navContainer ul li a
+    {
+        color:#ffffff;
+        font-size:1.5em;
+
+    }
+
+    #navContainer ul li a:hover
+    {
+        font-size:2em;
+
+    }
+    
+    .current
+    {
+        font-size:2em;
+    }
+    
+    
+    .side-nav-toggle
+    {
+        
+        position:absolute;
+        right:100%;
+        top:0;
+        
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left:15px;
+        
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        
+        border:none;
+        
+        background-color:#352035;
+        
+        outline:none;
+               
+    }
+    
+    
+    
+    .nav-hidden
+    {
+       left:95%; 
+    }
+    
+    .nav-expanded
+    {
+        left:30%;   
+    }
+    
+    
+    #mainContent
+    {
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+        
+        font-size:2.5em;
+
+    }
+    
+    .page-subtitle
+    {
+        text-align:left;
+        
+        
+    }
+    
+    .main-title
+    {
+        text-align:left;
+        font-size:2.5em;
+
+    }
 }
 
-.current
-{
-    font-size:1.25em;
-    color:#b7b8c4 !important;
+
+/*Medium*/
+@media all and (min-width:768px) and (max-width: 991px) {
+
+    
+    #mainContent
+    {
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .nav-expanded
+    {
+        left:70%;   
+    }
 }
 
 
 
 
+/*Large  --- Desktop*/
+@media all and (min-width: 992px) {
+    #mainContent
+    {
+        width:54%;
+        margin-left:35px;
+    }
+    
+    .side-nav-toggle
+    {
+        display:none;
+    }
+    
+    
+    #navContainer
+    {
+    
+    }
+
+    #navContainer ul
+    {
+
+        min-width:240px;
+
+    }
+
+    #navContainer ul li
+    {
+        display:block;
+        padding-top:8px;
+        padding-bottom:8px;
+
+        position:relative;
+
+        overflow:hidden;
+
+    }
+
+    #navContainer ul li a
+    {
+        color:#414141;
+    }
+
+    #navContainer ul li a:hover
+    {
+        font-size:1.25em;
+    }
+
+    
+    a .current
+    {
+        font-size:1.25em;
+        color:#b7b8c4;
+    }
+
+}
+
+
+
+
+
+
+
+/***************************Directives****************************/
 
 
 /*Bridal Party Styles*/
