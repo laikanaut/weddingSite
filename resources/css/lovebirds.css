@@ -1,0 +1,144 @@
+#lovebirds {
+    width:100px;
+    
+    margin-top:35px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+/*Lovebird Object*/
+.loveBirdContainer
+{  
+    position:relative;
+    cursor:pointer;
+}
+
+.loveBirdContainer wedding-party {
+    z-index:500;
+}
+
+#bride {
+    position:absolute;
+    right:100%;
+    top:0;
+}
+
+#groom {
+    position:absolute;
+    left:100%;
+    top:0;
+}
+
+
+.heartContainer {
+ 
+    position:absolute;
+    
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.heartText
+{
+    color:#ffffff;
+    
+    
+    
+    position:absolute;
+    
+    text-align:center;
+    
+    top:5px;
+}
+
+/*Fake Heart*/
+#heart {
+    background-color:#352035;
+    
+    position:relative;
+    
+    
+}
+
+
+.heart-collapsed {
+    height:150px;
+    width:150px;
+    
+}
+
+.heart-expanded {
+    
+}
+
+/*Heart*/
+/*#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #352035;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+*/
+
+
+/*Animations*/
+@keyframes slide-left {
+ 
+    0%; {right:100%;}
+    50% {right:150%;}
+    100% {right:100%;}
+    
+}
+
+.animate-left {
+ 
+    animation-name: slide-left;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+    animation-timing-function:ease-in;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+    
+}
+
+
