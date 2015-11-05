@@ -25,7 +25,7 @@
         
         var tomp = {
             userImg:"resources/img/people/tom_potter.png",
-            userGender:0,  //0F - 1M
+            userGender:1,  //0F - 1M
             userName:"Tom Potter",
             userAffil:0, //0K - 1J
             whoToCouple:"Katie's Brother",
@@ -52,7 +52,7 @@
         var lauren = {
             userImg:"resources/img/people/lauren_peach.png",
             userGender:0,  //0F - 1M
-            userName:"Amy Brown",
+            userName:"Lauren Peach",
             userAffil:0, //0K - 1J
             whoToCouple:"Katie's High School Friend",
             school:"ud",
@@ -64,9 +64,9 @@
         
         var john = {
             userImg:"resources/img/people/john_dicairano.png",
-            userGender:0,  //0F - 1M
-            userName:"Amy Brown",
-            userAffil:0, //0K - 1J
+            userGender:1,  //0F - 1M
+            userName:"John DiCairano",
+            userAffil:1, //0K - 1J
             whoToCouple:"Jimmy's Cousin",
             school:"ud",
             title:"",

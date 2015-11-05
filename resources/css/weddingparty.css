@@ -5,11 +5,14 @@
 wedding-party{
 
     max-width:125px;
+    display: inline-block;
 }
 
 
 .personContainer
 {
+    
+        
     width:10%;
     min-width:100px;
     position:relative;
@@ -25,7 +28,7 @@ wedding-party{
 .personAffiliation
 {
 
-    display:inline; 
+    display:inline-block;
     
     font-size:0.75em;
     
@@ -36,7 +39,7 @@ wedding-party{
 
 .personName
 {
-    position:absolute;
+    /*position:absolute;*/
     top:88%;
     
     display:block;
@@ -95,15 +98,15 @@ wedding-party{
 /*Shodowing*/
 .personContainer:hover > .personAffiliation
 {
-       text-shadow: 3px 3px 3px #b5b5b5;
+       text-shadow: 5px 5px 3px #222222;
 }
 
 .personContainer:hover > .personName
 {
-    box-shadow: 5px 5px 3px #c5c5c5;
+    box-shadow: 5px 5px 3px #444444;
 }
 
 .personContainer:hover > .personImg
 {
-    box-shadow: 5px 5px 3px #c5c5c5;
+    box-shadow: 5px 5px 3px #444444;
 }

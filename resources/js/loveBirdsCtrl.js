@@ -36,10 +36,11 @@
 
                 };
                
+               scope.isExpanded = false;
                
                 scope.heartClick = function() {
                     
-                   
+                   scope.isExpanded = !scope.isExpanded;
                    
                }
                

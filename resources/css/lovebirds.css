@@ -13,7 +13,18 @@
 {  
     position:relative;
     cursor:pointer;
+    
+    
 }
+
+
+
+
+
+
+
+
+
 
 .loveBirdContainer wedding-party {
     z-index:500;
@@ -40,9 +51,90 @@
     right:0;
     top:0;
     bottom:0;
+    
+    
+    perspective: 1000;
+	transform-style: preserve-3d;
+    
+    
+    
 }
 
-.heartText
+.heart-expanded .heartBack {
+    transform: rotateY(0deg);
+}
+.heart-expanded .heartFront {
+    transform: rotateY(-180deg);
+}
+
+
+.heart-collapsed {
+    width: 150px;
+	height: 150px;
+    
+    z-index:0;
+}
+
+.heart-expanded {
+    width: 150px;
+	height: 150px;
+    
+    z-index:600;
+}
+
+/*.heartContainer, .heartFront, .heartBack {
+	width: 150px;
+	height: 150px;
+}*/
+
+
+.heartFlip {
+    transition: 0.6s;
+	transform-style: preserve-3d;
+
+    
+	position: relative;
+}
+
+
+.heartFront, .heartBack  {
+	
+    
+    backface-visibility: hidden;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.heartFront {
+    
+    display:block;
+    z-index: 2;
+	transform: rotateY(0deg);
+    
+    background-color:#ff0000;
+
+    width:150px;
+	height: 150px;
+}
+
+.heartBack {
+    transform: rotateY(-180deg);
+    
+    background-color:#ff00ff;
+    
+    width: 150px;
+	height: 150px;
+}
+
+
+
+
+
+/*.heartText
 {
     color:#ffffff;
     
@@ -53,11 +145,11 @@
     text-align:center;
     
     top:5px;
-}
+}*/
 
 /*Fake Heart*/
 #heart {
-    background-color:#352035;
+    /*background-color:#352035;*/
     
     position:relative;
     
@@ -65,15 +157,13 @@
 }
 
 
-.heart-collapsed {
+/*.heart-collapsed {
     height:150px;
     width:150px;
     
-}
+}*/
 
-.heart-expanded {
-    
-}
+
 
 /*Heart*/
 /*#heart {

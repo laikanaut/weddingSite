@@ -3,9 +3,20 @@
     <div id="bride">
         <wedding-party person="bride" class="animate-left"></wedding-party>
     </div>
-    <div class="heartContainer">
-        <div id="heart" class="heart-collapsed" ng-click="heartClick()">
-            <p class="heartText">Test how text renders in heart</p>
+    <div class="heartContainer" ng-class="isExpanded  ? 'heart-expanded' : 'heart-collapsed'" ng-click="heartClick()">
+        <div class="heartFlip">
+            <div class="heartFront">
+                {{isExpanded}}
+                <!--<div id="heart"  >
+                    
+                </div>-->
+                
+            </div>
+            <div class="heartBack">
+                
+                
+            
+            </div>
         </div>
     </div>
     <div id="groom">
