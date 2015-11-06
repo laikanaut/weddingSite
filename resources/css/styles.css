@@ -1,16 +1,44 @@
-html, body{
-  min-height: 100%;
+html {
+  /*background: url(../img/bg/bg.jpg) no-repeat center center fixed; */
+    
+    /*background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bg/bg.jpg");
+    
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    background-position: 0% 0%, center center;
+    background-clip: border-box, border-box;
+    background-origin: padding-box, padding-box;
+
+    
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;*/
+    
+    
+    
+    background-color: #000; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/bg/bg.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
 }
 
 body {
-    color:#414141;
+    /*color:#414141;*/
+    color:#ffffff;
     font-size:16px;
  
-    background-color:#ecefda;
+    background-color:transparent;
+    /*background-color:#ecefda;
     background-image: radial-gradient(rgba(53,32,53,0.08) 15%, transparent 16%),
     radial-gradient(rgba(53,32,53,0.08) 15%, transparent 16%);
     background-size:60px 60px;
-    background-position: 0 0, 30px 30px;
+    background-position: 0 0, 30px 30px;*/
 
     
     
@@ -21,32 +49,18 @@ body {
     color:#352035;
     text-align:center;
     
+    
+    
     font-family: 'PT Serif', serif;
 }
+
+
 
 .main-title span {
     font-family: 'Libre Baskerville', serif;
 }
 
 
-#imgContainer {
-    padding-top:25px;
-    padding-left:20px;
-    
-    
-    width:22%;
-}
-
-#imgContainer img {
-    width:100%;
-    
-    border-radius:4px;
-    
-    opacity:0.75;
-    
-    filter: grayscale(10%);
-    
-}
 
 
 #mainContent {
@@ -66,9 +80,9 @@ body {
 
 
 #navContainer {
-    position:fixed;
+    /*position:fixed;*/
     transition: left 0.25s ease-out 0s;
-    width:300px;
+    /*width:300px;*/
 }
 
 #navContainer ul {
@@ -146,6 +160,12 @@ body {
 /*Small and XS*/
 @media all and (max-width: 991px) {  /*767px*/
     
+    
+    .main-title img {
+ 
+        width:68%;
+    }
+    
     .body-overlay {
         position: fixed;
         top: 0;
@@ -157,17 +177,24 @@ body {
     }
     
     .nav-btn {
-        color:#352035;
+        color:ffffff;
         position: relative;
         float: left;
         padding: 9px 10px;
         margin-top: 8px;
         margin-right: 25px;
         margin-top: 18px;
-        background-color: #ecefda;
+        background-color: transparent;
         background-image: none;
-        border: 1px solid #352035;
+        border: 1px solid #ffffff;
         border-radius: 4px;
+    }
+    
+    
+    .nav-btn:hover {
+    
+        
+    
     }
     
     #navContainer
@@ -178,6 +205,7 @@ body {
         background-color:#352035;  
         height:100%;
         color:#ffffff;
+        width:300px;
     }
     
     #navContainer ul
@@ -193,7 +221,7 @@ body {
     
     #navContainer ul li a
     {
-        color:#ffffff;
+        color:#ecefda;
         font-size:1.5em;
 
     }
@@ -256,6 +284,11 @@ body {
 @media all and (min-width:768px) and (max-width: 991px) {
 
     
+    .main-title img {
+ 
+        width:48%;
+    }
+    
     #mainContent
     {
         width:95%;
@@ -278,6 +311,12 @@ body {
 /*Large  --- Desktop*/
 @media all and (min-width: 992px) {
     
+    
+    .main-title img {
+ 
+        width:38%;
+    }
+    
     .body-overlay {
         display:none;   
     }
@@ -288,8 +327,8 @@ body {
     
     #mainContent
     {
-        width:54%;
-        margin-left:35px;
+        width:44%;
+        margin-right:35px;
     }
     
     .side-nav-toggle
@@ -300,15 +339,18 @@ body {
     
     #navContainer
     {
-        right:0;
-        width:200px;
+        width:100%;
     }
 
     #navContainer ul
     {
-
+        
+        display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        justify-content: space-around;
         /*min-width:240px;*/
-        width:220px;
+        width:100%;
 
     }
 
@@ -318,19 +360,16 @@ body {
         padding-top:8px;
         padding-bottom:8px;
 
-        position:relative;
-
-        overflow:hidden;
     }
 
     #navContainer ul li a
     {
-        color:#414141;
+        color:#ffffff;
     }
 
     #navContainer ul li a:hover
     {
-        font-size:1.25em;
+        /*font-size:1.25em;*/
     }
   
     a .current
